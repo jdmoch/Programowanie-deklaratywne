@@ -23,3 +23,10 @@ klauzul, które są faktami.
 /*
 
 */
+
+
+CZY C JEST NA A
+?-na(c,a).
+
+CZY D JEST NA KLOCKU A
+?-na(d,a).
