@@ -27,6 +27,17 @@ klauzul, które są faktami.
 
 CZY C JEST NA A
 ?-na(c,a).
+true
 
 CZY D JEST NA KLOCKU A
 ?-na(d,a).
+false
+
+POKAZUJE ZMIENNA 
+na(X,c)
+X = d
+
+NA JAKIM KLOCKU LEZY BEZPOSREDNIO KLOCEK C
+na(c,X).
+jak miga to istneije inna odpowiedz wtedy trzeba ";"
+
