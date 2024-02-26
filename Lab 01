@@ -41,3 +41,12 @@ NA JAKIM KLOCKU LEZY BEZPOSREDNIO KLOCEK C
 na(c,X).
 jak miga to istneije inna odpowiedz wtedy trzeba ";"
 
+CZY W OGOLE JAKIS KLOCEK LEZY NA C
+?- na(_,c).
+true.
+
+CZY KLOCEK A LEZY NA JAKIMS KLOCKU
+?- na(a,_)
+|    .
+false.
+
