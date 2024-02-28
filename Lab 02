@@ -11,7 +11,7 @@
 na(c,a).
 na(c,b).
 na(d,c).                  na - na klocku
-pod(X,Y):-na(Y,X)               pod - pod spodem
+pod(X,Y):-na(Y,X)               pod - pod klocem
 miedzy(X,Y,Z):-na(X,Y),pod(X,Z).    miedzy - miedzy klockami ma lezc
 miedzy(X,Y,Z):-na(X,Z),pod(X,Y).
 
