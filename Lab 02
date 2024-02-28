@@ -144,3 +144,28 @@ Zatem, lubi(X,Y),lubi(Y,X),X\==Y jest zapytaniem, które szuka par osób, gdzie 
 
 ------------------------------ZADANIE1
 
+lubi(jan,tatry).
+lubi(jan,beskidy).
+lubi(jerzy,beskidy).
+lubi(jerzy,bieszczady).
+lubi(adam,sudety).
+lubi(justyna,bieszczady).
+
+bratniadusza(X,Y):-lubi(X,G),lubi(Y,G), X\==Y.
+
+A)OKRESL
+
+a) znajduje sie 7 klauzul ( wsyzstkie linijki)
+b) 6 faktow (pierwsze 6 linijek) 1 reguła ( ostatnia linijka)
+c)
+d) 2 definicje relacji
+
+B)ODPOWIEDZ NA PYTANIA PROLOG
+
+1)czy jerzy lubi sudety
+2)Jakie gory lubi jan
+3)kto lub bieszczady
+4)czy jan ma bratnia dusze
+5)kto jest bratnia dusza justyny
+6)jakie pary osob sa bratnimi duszami
+
