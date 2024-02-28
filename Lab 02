@@ -30,3 +30,20 @@ true.
 CZY LEZY A LEZY BEZPOSREDNIO POD KLOCKIEM D
 ?- pod(a,d).
 false.
+
+JAKI KLOCEK LEZY BEZPOSREDNIO POD D
+?- pod(X,d)
+|    .
+X = c.
+
+!! d- stała
+!! X- zmienna
+
+JAKI KLOCEK LEZY BEZPOSREDNIO POD C
+?- pod(X,c)
+|    .
+X = a ;
+X = b.
+
+!! ; - odpowiedz alternatywna
+
