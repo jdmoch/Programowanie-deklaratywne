@@ -26,3 +26,7 @@ Definicja relacji na/2 składa się z 3 klauzul ktore sa faktami
 CZY LEZY C LEZY BEZPOSREDNIO POD KLOCKIEM D
 ?- pod(c,d).
 true.
+
+CZY LEZY A LEZY BEZPOSREDNIO POD KLOCKIEM D
+?- pod(a,d).
+false.
