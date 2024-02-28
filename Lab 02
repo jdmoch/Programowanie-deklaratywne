@@ -163,9 +163,36 @@ d) 2 definicje relacji
 B)ODPOWIEDZ NA PYTANIA PROLOG
 
 1)czy jerzy lubi sudety
-2)Jakie gory lubi jan
-3)kto lub bieszczady
-4)czy jan ma bratnia dusze
-5)kto jest bratnia dusza justyny
-6)jakie pary osob sa bratnimi duszami
+- lubi(jerzy,sudety).
+false.
 
+2)Jakie gory lubi jan
+?- lubi(jan,Y).
+Y = tatry ;
+Y = beskidy
+
+3)kto lub bieszczady
+?- lubi(X,bieszczady).
+X = jerzy ;
+X = justyna.
+
+4)czy jan ma bratnia dusze
+?- bratniadusza(jan,_).
+true.
+
+5)kto jest bratnia dusza justyny
+?- bratniadusza(justyna,Y).
+Y = jerzy ;
+false.
+
+6)jakie pary osob sa bratnimi duszami
+?- bratniadusza(X,Y).
+X = jan,
+Y = jerzy ;
+X = jerzy,
+Y = jan ;
+X = jerzy,
+Y = justyna ;
+X = justyna,
+Y = jerzy ;
+false.
