@@ -68,5 +68,15 @@ CZY JAKIS KLOCEK LEZY POD KLOCKIEM A
 |    .
 false.
 
+CZY C LEZY MIEDZY A I D
+
+?- miedzy(c,a,d).
+true 
+
+JAKI KLOCEK LEZY MIEDZY b,d
+
+?- miedzy(X,b,d).
+X = c ;
+false.
 
 
