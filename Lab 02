@@ -82,11 +82,12 @@ false.
 ----------------------------------ZADANIE 4
 
 % Grupa ludzi
-% lubi(X,Y) - X lubi y
-% jarosz(X) - X jest jaroszem
+% lubi(X,Y)-X lubi y
+% jarosz(X)-X jest jaroszem
 % niepalacy(X) - X nie pali papierosow
 % czyta(X) - X czyta ksiazki
-% sport(X) - X uprawia sport
+% sport(X)-X uprawia sport
+
 
 jarosz(ola).
 jarosz(ewa).
@@ -104,30 +105,24 @@ sport(piotr).
 sport(pawel).
 
 %podpunkt1
-
-lubi(ola,X)-:jarosz(X),sport(X).
+lubi(ola,X):-jarosz(X),sport(X).
 
 %podpunkt2
-
-lubi(ewa,X)-:jarosz(X),niepalacy(X).
+lubi(ewa,X):-jarosz(X),niepalacy(X).
 
 %podpunkt3
-
-lubi(iza,X)-:czyta(X).
-lubi(iza,X)-:sport(X), niepalacy(X).
+lubi(iza,X):-czyta(X).
+lubi(iza,X):-sport(X), niepalacy(X).
 
 %podpunkt4
-
-lubi(jan,X)-:sport(X).
+lubi(jan,X):-sport(X).
 
 %podpunkt5
-
-lubi(piotr,X)-:sport(X),jarosz(X).
-lubi(piotr,X)-:czyta(X).
+lubi(piotr,X):-sport(X),jarosz(X).
+lubi(piotr,X):-czyta(X).
 
 %podpunkt6
-
-lubi(pawel,X)-:jarosz(X),sport(X),czyta(X)
+lubi(pawel,X):-jarosz(X),sport(X),czyta(X).
 
 1.ola lubi jaroszy, którzy dodatkowo uprawiają sport
 2.Ewa lubi spedzac czas wsrod niepalacych jaroszy
@@ -138,4 +133,14 @@ lubi(pawel,X)-:jarosz(X),sport(X),czyta(X)
 
 jesli ola,ewa,jan i pawel sa jaroszami, ola ewa jan nie pala papierosow, Ola iza piotr czytaja ksiazki, ola jan piotr pawel uprawiaja sport.
 
+WYNIKI:
+wpisujemy i pokazuje jakeis
+lubi(X,Y),lubi(Y,X),X\==Y.
+
+lubi(X, Y) - oznacza, że X lubi Y na podstawie zdefiniowanych reguł.
+lubi(Y, X) - oznacza, że Y lubi X, co może być prawdą w innych warunkach, ponieważ relacja "lubienia" nie musi być wzajemna.
+X\==Y - oznacza, że X nie jest równy Y, co jest oczywistą zależnością, ponieważ nie możemy powiedzieć, że ktoś lubi samego siebie.
+Zatem, lubi(X,Y),lubi(Y,X),X\==Y jest zapytaniem, które szuka par osób, gdzie jedna lubi drugą, druga lubi pierwszą, ale są one różne. Innymi słowy, szuka ono wzajemnych, nieidentycznych relacji lubienia między dwoma osobami.
+
+------------------------------ZADANIE1
 
