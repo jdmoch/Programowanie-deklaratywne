@@ -1,14 +1,55 @@
 ZAD
+
 Zapisz wpostaci programu prologowego nastepujace informacje:
 Ola, Piotr i Karol mieszkają na dworcowej
 Ania i paweł mieszkają na ogrodowej
 Kamil i Gosia mieszkają na irysowej
-Marcin mieszka na tej samej ulucy co Ola
+Marcin mieszka na tej samej ulicy co Ola
 Jeżeli 2 osoby mieszkają na tej samej ulicy, to są sasiadami
 Napisz z ilu klauzul, z jakich definicji relacji, z ilu faktów i reguł składa sie program
 
+%zadanie ulice ogrody
+
+mieszka(ola,dworcowa).
+mieszka(piotr,dworcowa).
+mieszka(karol,dworcowa).
+mieszka(ania,ogrodowa).
+mieszka(pawel,ogrodowa).
+mieszka(kamil,irysowa).
+mieszka(gosia,irysowa).
+mieszka(marcin,Y):-mieszka(ola,Y).
+
+% Reguła definiująca sąsiadów na podstawie wspólnej ulicy
+sasiad(X,Y):-mieszka(X,U),mieszka(Y,U),X\==Y.
+
+% Definicja ilości klauzul, definicji relacji, faktów i reguł
+ilosc_klauzul(9). % 9 klauzul
+ilosc_definicji_relacji(1). % 1 definicja relacji (sasiedzi/2)
+ilosc_faktow(8). % 8 faktów
+ilosc_regul(1). % 1 reguła (marcin_sasiaduje_z_ola/0)
 Zapisz następujące cele
 1.Kto mieszka na Dworcowej
+
+mieszka(X,dworcowa).
+X = ola ;
+X = piotr ;
+X = karol ;
+X = marcin.
+
 2.Kto ejst sąsiadem Oli
+
+?- sasiad(ola,Y).
+false.
+
 3.Czy ktoś jest sąsiadem Marcina
+
+sasiad(marcin,_).
+true 
+
 4.Czy karol i Pawel maja wspolnych sąsiadow
+
+sasiad(karol, Y),sasiad(pawel, Y).
+false.
+
+
+
