@@ -1,0 +1,14 @@
+ZAD
+Zapisz wpostaci programu prologowego nastepujace informacje:
+Ola, Piotr i Karol mieszkają na dworcowej
+Ania i paweł mieszkają na ogrodowej
+Kamil i Gosia mieszkają na irysowej
+Marcin mieszka na tej samej ulucy co Ola
+Jeżeli 2 osoby mieszkają na tej samej ulicy, to są sasiadami
+Napisz z ilu klauzul, z jakich definicji relacji, z ilu faktów i reguł składa sie program
+
+Zapisz następujące cele
+1.Kto mieszka na Dworcowej
+2.Kto ejst sąsiadem Oli
+3.Czy ktoś jest sąsiadem Marcina
+4.Czy karol i Pawel maja wspolnych sąsiadow
