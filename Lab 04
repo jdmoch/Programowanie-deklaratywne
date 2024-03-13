@@ -11,6 +11,7 @@ dziadek(karol,marek).
 dziadek(X,Y):-ojciec(X,Z),dziecko(Y,Z).
 
 DRZEWO POSZUKIWANIA 
+
 zdjecie w telefonie
 
 UZYCIE TRACE
@@ -31,8 +32,22 @@ X = karol.
 ZAD
 dany jest program
 p(a,d).
-p(X,Y:-q(X,Z),r(Z,Y).
+p(X,Y):-q(X,Z),r(Z,Y).
 q(a,b).
 q(c,a).
 r(a,d).
 r(b,c).
+Przedstaw drzewa poszukiwania rozwiazan dla celów: p(a,c) , p(X,d), p(X,Y)
+
+zdjecie x2
+
+Zweryfikuj narysowane drzewa korzstając z predykatu trace
+
+od budziuna jedno
+
+[trace]  ?- p(x,d).
+   Call: (10) p(x, d) ? creep
+   Call: (11) q(x, _18064) ? creep
+   Fail: (11) q(x, _18064) ? creep
+   Fail: (10) p(x, d) ? creep
+false.
