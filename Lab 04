@@ -73,7 +73,7 @@ X = a ;
    Exit: (10) p(c, d) ? creep
 X = c.
 
-ZAD
+ZAD - dokonczyc
 układ klocków opisany ejst za pomoca relacji na/2
 na(d,c).
 na(c,a).
@@ -81,4 +81,30 @@ na(c,b).
 na(a,e).
 na(b,g).
 nad(X,Y):-(X,Y).
-Zdefiniuj rekurencyjnei predytak nad(X,Y)
+Zdefiniuj rekurencyjnei predytak nad(X,Y) spelniony gdy klocek X lezy nad klockiem Y( niekoniecznie bezposrednio)
+1) czy klocek d lezy nad b?
+2) czy klocek a lezy nad d
+3) nad jakim klockiem lezy klocek d
+4) jaki klocek lezy nad g
+5) nad jakimk klockiem cos lezy
+
+
+ZAD
+Wiadomo ze ewa jest rodzicem ani a piotr rodziem ewy.
+a) zdefiniuj relacje rodzic/2 a nastepnie korzystajac z tej definicji relacje przodek/2
+b) narysuj drzewo poszukiwania rozwiazania dla celu:
+   kto jest przodkiem ali
+c) zweryfikuj narysowane drzewo korzystajac z predykatu trace/0
+
+rodzic(ewa,ania).
+rodzic(piotr,ewa).
+przodek(X,Y):-rodzic(X,Y).
+przodek(X,Y):rodzic(X,Z),przodek(Z,Y).
+
+przodek(piotr,ania).
+przodek(ania,ewa).
+przodek(X,ania).
+przodek(piotr,X).
+przodek(ewa,_).
+przodek(ania,_).
+
