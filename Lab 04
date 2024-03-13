@@ -1,1 +1,38 @@
+ZAD
+Nad podstawie przedstawionego przuykladu dlap onizszego programu narysuj drzewo poszukiwana rozwiazania dla celu: Kto jest dziadkiem Piotra? Zweryfikuj narysowane drzewo korzystajac z predykatu trace/0
 
+ojciec(karol,jan).
+ojciec(karol,adam).
+
+dziecko(tomasz,jan).
+dziecko(piotr,adam).
+
+dziadek(karol,marek).
+dziadek(X,Y):-ojciec(X,Z),dziecko(Y,Z).
+
+DRZEWO POSZUKIWANIA 
+zdjecie w telefonie
+
+UZYCIE TRACE
+
+[trace]  ?- dziadek(X,piotr).
+   Call: (10) dziadek(_16908, piotr) ? creep
+   Call: (11) ojciec(_16908, _18098) ? creep
+   Exit: (11) ojciec(karol, jan) ? creep
+   Call: (11) dziecko(piotr, jan) ? creep
+   Fail: (11) dziecko(piotr, jan) ? creep
+   Redo: (11) ojciec(_16908, _18098) ? creep
+   Exit: (11) ojciec(karol, adam) ? creep
+   Call: (11) dziecko(piotr, adam) ? creep
+   Exit: (11) dziecko(piotr, adam) ? creep
+   Exit: (10) dziadek(karol, piotr) ? creep
+X = karol.
+
+ZAD
+dany jest program
+p(a,d).
+p(X,Y:-q(X,Z),r(Z,Y).
+q(a,b).
+q(c,a).
+r(a,d).
+r(b,c).
