@@ -45,9 +45,19 @@ Zweryfikuj narysowane drzewa korzstając z predykatu trace
 
 od budziuna jedno
 
-[trace]  ?- p(x,d).
-   Call: (10) p(x, d) ? creep
-   Call: (11) q(x, _18064) ? creep
-   Fail: (11) q(x, _18064) ? creep
-   Fail: (10) p(x, d) ? creep
-false.
+[trace]  ?- 
+|    p(X,d).
+   Call: (10) p(_25668, d) ? creep
+   Exit: (10) p(a, d) ? creep
+X = a ;
+   Redo: (10) p(_25668, d) ? creep
+   Call: (11) q(_25668, _29698) ? creep
+   Exit: (11) q(a, b) ? creep
+   Call: (11) r(b, d) ? creep
+   Fail: (11) r(b, d) ? creep
+   Redo: (11) q(_25668, _29698) ? creep
+   Exit: (11) q(c, a) ? creep
+   Call: (11) r(a, d) ? creep
+   Exit: (11) r(a, d) ? creep
+   Exit: (10) p(c, d) ? creep
+X = c.
