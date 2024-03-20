@@ -83,3 +83,7 @@ Definicja: rekurencja strukturalna
   st(W^N) = st(W)*N (N- liczba naturalna, N>1)
 
 */
+
+%st_wielomian(W,X,N)
+%spełniony gdy N  jest stopniem wielomianu W
+%zmiennej X o współczynnikach liczbowych
