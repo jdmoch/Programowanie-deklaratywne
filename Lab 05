@@ -1,3 +1,16 @@
+%maximum X1 i X2
+/*
+działania
+/+ dzielenie
+++ dodawanie
+-+ odejmowanie 
+*+ mnozenie 
+//+ 
+**+ potega 2
+mod+ modulo
+^+ poteaga 2
+*/
+
 %Rozpoznawanie wielomianow jednej zmiennej
 %o wspolczynnikach liczbowych
 
