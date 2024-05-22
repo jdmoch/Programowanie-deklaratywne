@@ -18,4 +18,7 @@ lista5::[Int]->[Int]
 lista5 []=[]
 lista5 (x:xs)=(razy5 x):(lista5 xs)
 
+--iloczyn listy
+iloczyn_listy::[Int]->Int
+iloczyn_listy []=
 
