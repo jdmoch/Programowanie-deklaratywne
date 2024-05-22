@@ -6,3 +6,16 @@ kwadrat x=x*x
 kwadrat_lista::[Int]->[Int]
 kwadrat_lista []==[]
 kwadrat_lista (x:xs)=(kwadrat x):(kwadrat_lista xs)
+
+--lista wieksza o 2
+wieksze2 x=x+2
+lista2::[Int]->[Int]
+lista2 []=[]
+
+--lista razy 5
+razy5 x=x*5
+lista5::[Int]->[Int]
+lista5 []=[]
+lista5 (x:xs)=(razy5 x):(lista5 xs)
+
+
